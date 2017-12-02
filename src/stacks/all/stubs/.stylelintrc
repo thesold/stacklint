@@ -1,0 +1,22 @@
+{
+    "extends": "stylelint-config-standard",
+    "plugins": [
+        "stylelint-scss",
+        "stylelint-selector-bem-pattern"
+    ],
+    "rules": {
+        "plugin/selector-bem-pattern": {
+            "preset": "bem",
+            "componentName": "(([a-z0-9]+(?!-$)-?)+)",
+            "componentSelectors": {
+                "initial": "\\.{componentName}(((__|--)(([a-z0-9\\[\\]'=]+(?!-$)-?)+))+)?$"
+            },
+            "ignoreSelectors": ["h1","h2","h3","h4","h5","h6","p","blockquote","pre","a","abbr","acronym","address","big","cite","code","del","dfn","em","img","ins","kbd","q","s","samp","small","strike","strong","sub","sup","tt","var","b","u","i","center","dl","dt","dd","ol","ul","li","fieldset","form","label","legend","table","caption","tbody","tfoot","thead","tr","th","td","article","aside","canvas","details","embed","figure","figcaption","footer","header","hgroup","menu","nav","output","section","summary","time","mark","audio","video","hr"]
+        },
+        "indentation": 4
+    },
+    "ignoreFiles": [
+        "public/**/*",
+        "node_modeules/**/*"
+    ]
+}
