@@ -1,13 +1,13 @@
 {
     "name": "stacklint",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Code-style and linting presets cli-tool to quickly scaffold project development",
     "main": "index.js",
     "repository": {
         "type": "git",
         "url": "git+ssh://git@github.com/thesold/stacklint.git"
     },
-    "author": "sold",
+    "author": "thesold",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/thesold/stacklint/issues"
