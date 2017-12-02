@@ -1,7 +1,5 @@
 {
     "parser": "babel-eslint",
-    "plugins": ["vue"],
-    "extends": ["airbnb-base"],
     "rules": {
         "semi": ["error", "never"],
         "indent": ["error", 4]
