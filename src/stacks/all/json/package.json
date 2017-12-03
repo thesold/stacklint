@@ -2,7 +2,7 @@
     "scripts": {
         "precommit": "lint-staged"
     },
-    "dependencies": {
+    "devDependencies": {
         "husky": "^0.14.3",
         "lint-staged": "^6.0.0"
     }
