@@ -27,7 +27,7 @@ if (!stacks.length) {
     const stackPathJson = path.resolve(__dirname, '../src/stacks/', stack, 'json')
     const stackPathStubs = path.resolve(__dirname, '../src/stacks/', stack, 'stubs')
 
-    fs.readdir(stackPathStubs, (err, files) => {
+    const files = fs.readdir(stackPathStubs, (err, files) => {
         if (err) {
             console.warn(`No ${stack} stubs found`)
             return

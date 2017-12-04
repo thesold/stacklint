@@ -1,5 +1,5 @@
 const jsonfile = require('jsonfile')
-const json_merger = require('json_merger')
+const _ = require('lodash')
 
 exports.files = (sourceFile, targetFile) => {
     jsonfile.readFile(sourceFile, (err, sourceJson) => {
@@ -14,7 +14,9 @@ exports.files = (sourceFile, targetFile) => {
                 return false
             }
 
-            const outputJson = json_merger.merge(targetJson, sourceJson)
+            const outputJson = _.mergeWith(targetJson, sourceJson, (objValue, srcValue) => {
+                if (_.isArray(objValue)) return objValue.concat(srcValue)
+            })
 
             jsonfile.writeFile(targetFile, outputJson, {spaces: 4}, err => {
                 if (err) {

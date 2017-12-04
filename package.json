@@ -1,6 +1,6 @@
 {
     "name": "stacklint",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "Code-style and linting presets cli-tool to quickly scaffold project development",
     "main": "index.js",
     "repository": {
@@ -17,8 +17,8 @@
         "stacklint": "bin/lint.js"
     },
     "dependencies": {
-        "json_merger": "^1.2.0",
         "jsonfile": "^4.0.0",
-        "minimist": "^1.2.0"
+        "minimist": "^1.2.0",
+        "lodash": "^4.17.4"
     }
 }
