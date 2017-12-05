@@ -2,7 +2,7 @@
 
 Code-style and linting presets cli-tool to quickly scaffold project development.
 
-[![npm](https://img.shields.io/npm/v/stacklint.svg?style=for-the-badge)](https://github.com/thesold/stacklint)
+[![npm](https://img.shields.io/npm/v/stacklint.svg?style=for-the-badge)](https://www.npmjs.com/package/stacklint)
 [![npm](https://img.shields.io/npm/dm/stacklint.svg?style=for-the-badge)](https://github.com/thesold/stacklint)
 [![npm](https://img.shields.io/npm/l/stacklint.svg?style=for-the-badge)](https://github.com/thesold/stacklint)
 
