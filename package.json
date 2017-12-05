@@ -20,5 +20,18 @@
         "jsonfile": "^4.0.0",
         "minimist": "^1.2.0",
         "lodash": "^4.17.4"
+    },
+    "scripts": {
+        "precommit": "lint-staged"
+    },
+    "devDependencies": {
+        "husky": "^0.14.3",
+        "lint-staged": "^6.0.0",
+        "jsonlint": "^1.6.0",
+        "markdownlint-cli": "^0.5.0",
+        "babel-eslint": "^8.0.2",
+        "eslint": "^4.12.1",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-plugin-import": "^2.8.0"
     }
 }
