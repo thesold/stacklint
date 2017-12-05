@@ -1,5 +1,6 @@
 {
     "devDependencies": {
+        "eslint-plugin-import": "^2.8.0",
         "eslint-config-airbnb-base": "^12.1.0"
     }
 }
