@@ -8,7 +8,9 @@ exports.files = (sourceFile, targetFile) => {
 
     const outputJson = _.mergeWith(targetJson, sourceJson, (objValue, srcValue) => {
         if (_.isArray(objValue)) return _.uniq(objValue.concat(srcValue))
+
+        return objValue
     })
 
-    return jsonfile.writeFileSync(targetFile, outputJson, {spaces: 4})
+    return jsonfile.writeFileSync(targetFile, outputJson, { spaces: 4 })
 }
