@@ -1,8 +1,8 @@
 {
     "*.json": [
-        "eslint"
+        "jsonlint"
     ],
     ".*rc": [
-        "eslint"
+        "jsonlint"
     ]
 }

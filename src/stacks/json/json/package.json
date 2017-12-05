@@ -1,6 +1,5 @@
 {
     "devDependencies": {
-        "eslint-plugin-import": "^2.8.0",
-        "eslint-plugin-json": "^1.2.0"
+        "jsonlint": "^1.6.0"
     }
 }
