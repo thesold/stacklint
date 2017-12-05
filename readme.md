@@ -51,6 +51,18 @@ Installs packages and configs for:
 1. Markdownlint
 1. Jsonlint
 
+```sh
+stacklint js airbnb vue
+```
+
+Installs packages and config for:
+
+1. Lintstaged
+1. ESLint
+    1. Airbnb extend
+    1. Vue.js plugin
+    1. Babel plugin
+
 ## Available stacks
 
 You can quickly check which stacks are available by running `stacklint -l` or `stacklint --list`.
