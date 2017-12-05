@@ -27,28 +27,17 @@ if (!stacks.length) {
     const stackPathJson = path.resolve(__dirname, '../src/stacks/', stack, 'json')
     const stackPathStubs = path.resolve(__dirname, '../src/stacks/', stack, 'stubs')
 
-    fs.readdir(stackPathStubs, (err, files) => {
-        if (err) {
-            console.warn(`No ${stack} stubs found`)
-            return
-        }
-        files.forEach(fileName => {
-            fs.copyFile(path.resolve(stackPathStubs, fileName), fileName, COPYFILE_EXCL, err => {
-                if (err && err.code !== 'EEXIST') {
-                    console.warn(`${fileName} already exists`)
-                    return
-                }
-            })
-        })
+    const stubFiles = fs.readdirSync(stackPathStubs)
+
+    stubFiles.forEach(fileName => {
+        if (fs.existsSync(fileName)) return
+
+        fs.copyFileSync(path.resolve(stackPathStubs, fileName), fileName, COPYFILE_EXCL)
     })
 
-    fs.readdir(stackPathJson, (err, files) => {
-        if (err) {
-            console.warn(`No ${stack} json found`)
-            return
-        }
-        files.forEach(fileName => {
-            mergeJson.files(path.resolve(stackPathJson, fileName), fileName)
-        })
+    const stackFiles = fs.readdirSync(stackPathJson)
+
+    stackFiles.forEach(fileName => {
+        mergeJson.files(path.resolve(stackPathJson, fileName), fileName)
     })
 })

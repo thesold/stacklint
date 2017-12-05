@@ -1,6 +1,6 @@
 {
     "name": "stacklint",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "description": "Code-style and linting presets cli-tool to quickly scaffold project development",
     "main": "index.js",
     "repository": {
