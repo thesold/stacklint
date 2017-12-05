@@ -7,7 +7,7 @@ exports.files = (sourceFile, targetFile) => {
     const targetJson = fs.existsSync(targetFile) ? jsonfile.readFileSync(targetFile) : {}
 
     const outputJson = _.mergeWith(targetJson, sourceJson, (objValue, srcValue) => {
-        if (_.isArray(objValue)) return objValue.concat(srcValue)
+        if (_.isArray(objValue)) return _.uniq(objValue.concat(srcValue))
     })
 
     return jsonfile.writeFileSync(targetFile, outputJson, {spaces: 4})
