@@ -28,17 +28,21 @@ if (!stacks.length) {
     const stackPathJson = path.resolve(__dirname, '../src/stacks/', stack, 'json')
     const stackPathStubs = path.resolve(__dirname, '../src/stacks/', stack, 'stubs')
 
-    const stubFiles = fs.readdirSync(stackPathStubs)
+    if (fs.existsSync(stackPathStubs)) {
+        const stubFiles = fs.readdirSync(stackPathStubs)
 
-    stubFiles.forEach((fileName) => {
-        if (fs.existsSync(fileName)) return
+        stubFiles.forEach((fileName) => {
+            if (fs.existsSync(fileName)) return
 
-        fs.copyFileSync(path.resolve(stackPathStubs, fileName), fileName, COPYFILE_EXCL)
-    })
+            fs.copyFileSync(path.resolve(stackPathStubs, fileName), fileName, COPYFILE_EXCL)
+        })
+    }
 
-    const stackFiles = fs.readdirSync(stackPathJson)
+    if (fs.existsSync(stackPathJson)) {
+        const stackFiles = fs.readdirSync(stackPathJson)
 
-    stackFiles.forEach((fileName) => {
-        mergeJson.files(path.resolve(stackPathJson, fileName), fileName)
-    })
+        stackFiles.forEach((fileName) => {
+            mergeJson.files(path.resolve(stackPathJson, fileName), fileName)
+        })
+    }
 })
