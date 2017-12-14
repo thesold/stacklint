@@ -36,6 +36,8 @@ npm install
 composer install
 ```
 
+**Note:** Because lintstaged installs some git hooks, you should initialise your git repository before running `npm install` after setting up your stacks.
+
 ## Examples
 
 The following example will setup all required files and packages to lint `php` and `md` Markdown files when they are committed to git.
