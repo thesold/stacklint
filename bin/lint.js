@@ -82,4 +82,4 @@ Are you sure you want to continue?
 
     console.log('Stack linting is now installed. Please run npm/composer install as required.')
     return true
-})
+}).catch(error => console.log(error))
