@@ -1,3 +1,9 @@
 {
+    "rules": {
+        "vue/html-indent": ["error", 4]
+    },
+    "extends": [
+        "plugin:vue/recommended"
+    ],
     "plugins": ["vue"]
 }
