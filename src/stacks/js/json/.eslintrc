@@ -1,14 +1,24 @@
 {
     "rules": {
-        "semi": ["error", "never"],
-        "indent": ["error", 4],
-        "no-console": 1
+        "semi": [
+            "error",
+            "never"
+        ],
+        "indent": [
+            "error",
+            4
+        ],
+        "import/no-extraneous-dependencies": ["error", {
+            "devDependencies": true
+        }],
+        "no-console": 1,
+        "radix": 0
     },
     "parserOptions": {
+        "parser": "babel-eslint",
         "ecmaVersion": 6,
         "sourceType": "module",
-        "impliedStrict": true,
-        "parser": "babel-eslint"
+        "impliedStrict": true
     },
     "env": {
         "es6": true,
